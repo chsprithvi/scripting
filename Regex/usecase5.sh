@@ -1,6 +1,5 @@
-read -p "Enter your" name
-pat="^[a-z]*{4,}(?=.[a-z]){4}$"
-if  [[ $name =~ $pat ]]
+read -p "Enter your" s
+if  [[ ${#s} -ge 6 && "$s" == *[[:lower:]]* && "$s" == *[[:upper:]]* && "$s" == *[0-9]* ]]
 then
 echo yes
 else
