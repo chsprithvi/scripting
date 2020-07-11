@@ -1,5 +1,6 @@
 read -p "Enter your" s
-if [[ ${#s} -ge 6 && "$s" == *[[:lower:]]* && "$s" == *[[:upper:]]* && "$s" == *[0-9]* ]]
+pat="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+if [[ $pat==$s ]]
 echo yes
 else
 echo no
