@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class EmpUC7{
+public class EmpUC8{
     private static final int IS_FULL_TIME=1;
     private static final int IS_PART_TIME=2;
     private static int hour=0;
