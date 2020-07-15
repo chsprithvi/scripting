@@ -1,5 +1,11 @@
+/**
+*importing java scanner class from util package.
+*/
 import java.util.Scanner;
-public class EmpUC8{
+/**
+ * The Employee check class
+ */
+public class EmployeeWageCompany{
     private static final int IS_FULL_TIME=1;
     private static final int IS_PART_TIME=2;
     private static int hour=0;
@@ -11,7 +17,11 @@ public class EmpUC8{
         empCheck();
         System.out.println("Total Employee Wage :" + wageTotal);
     }
-    
+    /**
+	 * input variables wagePerHour, days, hourlimit for month.
+	 * @return wage if employee present otherwise false.
+     * @return total wage for employee based on full-time or part
+	 */
     public static void empCheck(){
     
         Scanner myObj = new Scanner(System.in);
@@ -47,6 +57,12 @@ public class EmpUC8{
     }
     }
     }
+    /**
+	 * Calculate employee wage based on params.
+	 * @param ratePerHrs the employee rate per hours.
+	 * @param totalHrs total employee hours.
+	 * @return total employee wage.
+	 */
     public static double cal(final double ratePerHrs, final double totalHrs){
        final double cal= ratePerHrs*totalHrs;
        return cal;
