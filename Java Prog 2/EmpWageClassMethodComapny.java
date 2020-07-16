@@ -1,7 +1,15 @@
+/**
+ * The Employee check class
+ */
 public class EmpWageClassMethodCompany {
 	
 	private static final int IS_PART_TIME = 1;
 	private static final int IS_FULL_TIME = 2;
+	 /**
+	 * Passing values wagePerHour, days, hourlimt.
+	 * @return wage if employee present otherwise false.
+     	 * @return total wage for employee based on full-time or part for Individual company.
+	 */
 
 	public static void computeEmpWage(String company, int empRatePerHour, int numOfWorkingDays, int maxHrsInMonth) {
 		//variables
@@ -27,6 +35,10 @@ public class EmpWageClassMethodCompany {
         int totalEmpWage = totalEmpHrs * empRatePerHour;
         System.out.println("Total Emp wage for company: "+company+"is: "+totalEmpWage);
     }
+    	/**
+ 	* The MAIN() class and parameters passing.
+ 	*/
+	
     public static void main(String[] args) {
         computeEmpWage("Apple", 20, 2, 10);
         computeEmpWage("Samsung", 10, 4, 20);        
