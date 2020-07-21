@@ -1,13 +1,18 @@
+//Importing Packages 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
+
+//interface class
 
 interface IEmpWageBuilderUC13{
     void addCompanyEmpWage(String company, int empRatePerHr, int numOfWorkingDays, int maxHoursPerMonth);
     void totalEmpWage();
     int getTotalWage(String company);
 }
+
+//Abstract class
 
 public class EmpWageBuilderUC13 implements IEmpWageBuilderUC13{
     public static final int IS_FULL_TIME = 1;
@@ -69,6 +74,8 @@ public class EmpWageBuilderUC13 implements IEmpWageBuilderUC13{
         return totalEmpHrs * company.getEmpRate();
         // System.out.println("Total Emp Wage for company company is " + totalEmpWage);
     }
+	
+	// Main() class
 
     public static void main(final String[] args) {
         final EmpWageBuilderUC13 compObj = new EmpWageBuilderUC13();
@@ -78,6 +85,8 @@ public class EmpWageBuilderUC13 implements IEmpWageBuilderUC13{
         System.out.println("Total Wage for DMart Company: "+compObj.getTotalWage("DMart"));
     }
 }
+
+
 class Company {
 
 	private String name;
